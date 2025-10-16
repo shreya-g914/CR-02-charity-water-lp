@@ -1,47 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>charity: water — Turn Your Coffee Money Into Clean Water</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <meta name="description" content="100% of your gift goes straight to the field and you’ll see the real impact of your donation, all from your phone."/>
 </head>
+
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
+  <!-- ===== Brand Bar ===== -->
+  <header class="brandbar" role="banner">
+    <div class="container brandbar__inner">
+      <!-- Placeholder logo square to mimic the yellow jerrycan mark -->
+      <div class="logo-sq" aria-hidden="true"></div>
+      <a class="brandbar__name" href="#" aria-label="charity: water home">charity: water</a>
+      <!-- (Optional) simple nav anchors you can wire later -->
+      <nav class="brandbar__nav" aria-label="Site">
+        <a href="#how">How it works</a>
+        <a href="#story">Impact</a>
+        <a href="#donate" class="link-donate">Donate</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+  <!-- ===== Hero ===== -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <h1 id="hero-title" class="hero__title">
+          Turn Your <span class="nowrap">Coffee Money</span><br/>
+          Into Clean Water
+        </h1>
+        <p class="hero__sub">
+          <strong>100%</strong> of your gift goes straight to the field and you’ll see the real impact of your donation, all from your phone.
+        </p>
+        <a id="donate" href="#donate" class="btn btn--primary star-tag" aria-label="Donate now">
+          Donate Now
+        </a>
+      </div>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
+      <!-- Right-hand hero image (placeholder) -->
+      <div class="hero__image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=1400&auto=format&fit=crop"
+          alt="Smiling child holding a glass of clean water"
+          class="hero__image"
+          loading="eager"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== How it Works ===== -->
+  <section id="how" class="how">
+    <div class="container">
+      <h2 class="section-title">How your gift becomes clean water</h2>
+      <div class="how__grid">
+        <div class="card">
+          <img src="https://picsum.photos/seed/pledge/160/120" alt="" class="card__img" />
+          <h3 class="card__title">You Pledge</h3>
+          <p class="card__text">Give what a coffee costs. Small daily gifts add up to big change.</p>
         </div>
-    </section>
+        <div class="card">
+          <img src="https://picsum.photos/seed/build/160/120" alt="" class="card__img" />
+          <h3 class="card__title">We Build</h3>
+          <p class="card__text">Local partners drill wells and install sustainable water systems.</p>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/seed/see/160/120" alt="" class="card__img" />
+          <h3 class="card__title">You See</h3>
+          <p class="card__text">Track projects and see impact updates right from your phone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+  <!-- ===== Impact Story ===== -->
+  <section id="story" class="impact">
+    <div class="container impact__inner">
+      <img
+        src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=720&q=80"
+        alt="Amina smiling with clean water"
+        class="impact__img"
+      />
+      <div class="impact__copy">
+        <h2 class="section-title">Real impact: Meet Amina</h2>
+        <p>
+          Amina used to walk miles each day to collect water. Thanks to supporters like you,
+          her village now has a nearby well. She’s back in school, her family is healthier,
+          and the community is thriving.
+        </p>
+        <a href="#donate" class="btn btn--ghost">Fund the next story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer / Secondary CTA ===== -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p class="footer__line">100% to the field. Transparent updates. Hope over guilt.</p>
+      <a href="#donate" class="btn btn--primary">Donate Now</a>
+    </div>
+  </footer>
 </body>
 </html>
