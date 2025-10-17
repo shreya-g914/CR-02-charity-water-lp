@@ -178,7 +178,7 @@ html, body {
   margin-top: 0;
   margin-bottom: 18px;      /* restores the old compact look */
   max-width: 420px;         /* keeps subheading narrow and readable */
-  color: var(--black);
+  color: #FFF7E1;
 }
 
 /* Donate button stays in the same position as before */
