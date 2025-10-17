@@ -45,29 +45,33 @@ html, body {
   gap: 14px;
   padding: 12px 0;
 }
-.logo-box {
-  width: 35px;
-  height: 35px;
-  background-image: url("logo.jpg");
-  background-size:contain;
-  background-repeat:no-repeat;
-  background-position:center;
-  margin-right: 8px;
-}
-.brand-name {
-  font-family: Georgia, 'Times New Roman', serif;
-  color: var(--black);
-  font-size: 1.4rem;
-  font-weight: normal;
-  letter-spacing: 0.5px;
-  text-decoration: none; /* removes underline if it somehow stays linked */
-}
 .site-header {
   display: flex;
   align-items: center;
-  gap: 10px;
-  background-color: var(--cream);
-  padding: 20px 40px;
+  justify-content: flex-start;
+  gap: 6px; /* smaller gap between logo and text */
+  background-color: var(--cream); /* or use var(--black) if you want dark mode like 2nd image */
+  padding: 10px 40px; /* reduced padding = thinner header */
+  height: 55px; /* keeps header compact */
+  box-sizing: border-box;
+}
+.logo-box {
+  width: 26px;
+  height: 26px;
+  background-image: url("logo.jpg"); /* keep your image path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.brand-name {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.2rem;
+  color: var(--black);
+  font-weight: normal;
+  letter-spacing: 0.6px;
+  margin: 0;
+  padding: 0;
+  line-height: 1; /* aligns with logo nicely */
 }
 
 .brandbar__nav a {
