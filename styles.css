@@ -53,12 +53,12 @@ html, body {
   background-repeat: no-repeat;
   background-position: center;
 }
-.brandbar__name {
-  font-weight: 800;
-  letter-spacing: 0.3px;
-  color: var(--navy);
-  text-decoration: none;
-  margin-right: auto;
+.brand-name {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--black);
+  font-size: 1.4rem;
+  font-weight: normal;
+  letter-spacing: 0.5px;
 }
 .brandbar__nav a {
   color: var(--black);
