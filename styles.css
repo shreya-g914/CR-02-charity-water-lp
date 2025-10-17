@@ -48,7 +48,7 @@ html, body {
 .logo-box {
   width: 35px;
   height: 35px;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/56/Charity_water_logo_can_only.png");
+  background-image: url("logo.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
