@@ -78,34 +78,33 @@ html, body {
   color: var(--cream);
 }
 
-/* ---------- Hero Section (Restored Layout) ---------- */
+
 .hero {
-  background: url("boydrinkingwater.jpg") center 20% no-repeat;
-  background-size: cover;
-  color: var(--black);
-  text-align: left;
-  padding: 120px 40px;    
-  min-height: 600px;
-  width: 100%;
-  border-radius: 0;
-  margin: 0;
+  background-position: 72% 20%;   /* try 70–78% if you want more space left */
+  padding: 110px 40px;            /* same feel as your earlier version */
 }
 
-/* Hero text */
 .hero__title {
-  font-family: var(--font-sans);
-  color: var(--yellow);
-  font-size: clamp(2rem, 5vw, 3.4rem);
-  font-weight: 800;
-  margin: 0 0 16px;
+  font-size: clamp(1.9rem, 5.2vw, 3.0rem); /* was larger – this brings it down */
+  line-height: 1.06;                       /* tighter */
+  margin: 0 0 10px;                        /* compact spacing */
+  max-width: 42rem;                        /* prevents drifting toward the boy */
 }
+
 .hero__sub {
-  font-family: var(--font-serif);
-  font-size: 1.2rem;
-  max-width: 42ch;
-  margin: 0 0 20px;
-  color: var(--black);
+  font-family: var(--font-sans);           /* was Georgia; back to Proxima/Avenir */
+  color: #ffffff;                           /* back to white */
+  text-shadow: 0 2px 6px rgba(0,0,0,.28);   /* subtle readability like before */
+  font-weight: 500;
+  font-size: clamp(1rem, 2.1vw, 1.15rem);
+  margin: 0 0 16px;
+  max-width: 36rem;                         /* narrower = less crowding */
 }
+
+@media (min-width: 1200px){
+  .hero { padding-left: 7%; padding-right: 7%; }
+}
+
 .star-tag::after {
   content: "★";
   position: absolute;
