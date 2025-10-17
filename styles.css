@@ -95,11 +95,12 @@ html, body {
 .hero__title {
   font-family: var(--font-sans);
   color: var(--yellow);
-  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-size: clamp(1.8rem, 4.5vw, 2.8rem); /* smaller & responsive */
   font-weight: 800;
   margin: 0 0 10px;
   line-height: 1.05;
-  white-space: nowrap;   /* forces the whole sentence to stay on one line */
+  white-space: nowrap;
+  text-transform: uppercase; /* makes it ALL CAPS */
 }
 
 .hero__sub {
