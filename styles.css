@@ -35,7 +35,7 @@
 html, body { height: 100%; }
 body{
   margin: 0;
-  font-family: Avenir, "Proxima Nova";
+  font-family: Avenir, "Proxima Nova", Georgia;
   color: var(--ink);
   background: var(--bg);
   line-height: 1.5;
