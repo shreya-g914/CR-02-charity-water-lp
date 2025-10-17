@@ -120,7 +120,7 @@ body{
 
 /* ---------- Hero ---------- */
 .hero {
-  background: url("boy-drinking-water.jpg") center center no-repeat;
+  background: url("boydrinkingwater.jpg") center center no-repeat;
   background-size: cover;          /* fills the whole width and height */
   background-attachment: scroll;   /* keeps it responsive */
   color: #fff;
