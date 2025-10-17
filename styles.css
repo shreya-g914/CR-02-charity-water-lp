@@ -122,8 +122,10 @@ body{
 .hero{
   /* Teal/blue photographic field with a soft overlay for readability */
   background:
-    linear-gradient( to right, rgba(46,157,247,0.55), rgba(46,157,247,0.15) ),
     url("boydrinkingwater.jpg") center/cover no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   color: #fff;
   padding: 100px 20px;
   border-bottom-left-radius: var(--r-md);
