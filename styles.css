@@ -80,31 +80,42 @@ html, body {
 
 
 .hero {
-  background-position: 72% 20%;   /* try 70–78% if you want more space left */
-  padding: 110px 40px;            /* same feel as your earlier version */
+  background: url("boydrinkingwater.jpg") center 20% no-repeat;
+  background-size: cover;
+  color: var(--black);
+  text-align: left;
+  padding: 120px 40px;     /* restores the original spacing */
+  min-height: 600px;
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
 }
 
+/* Restored heading + subheading layout */
 .hero__title {
-  font-size: clamp(1.9rem, 5.2vw, 3.0rem); /* was larger – this brings it down */
-  line-height: 1.06;                       /* tighter */
-  margin: 0 0 10px;                        /* compact spacing */
-  max-width: 42rem;                        /* prevents drifting toward the boy */
+  font-family: var(--font-sans);
+  color: var(--yellow);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  margin: 0 0 10px;         /* tighter spacing like before */
+  line-height: 1.05;        /* slightly more compact lines */
+  max-width: 600px;         /* prevents the text from going too far right */
 }
 
 .hero__sub {
-  font-family: var(--font-sans);           /* was Georgia; back to Proxima/Avenir */
-  color: #ffffff;                           /* back to white */
-  text-shadow: 0 2px 6px rgba(0,0,0,.28);   /* subtle readability like before */
-  font-weight: 500;
-  font-size: clamp(1rem, 2.1vw, 1.15rem);
-  margin: 0 0 16px;
-  max-width: 36rem;                         /* narrower = less crowding */
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 18px;      /* restores the old compact look */
+  max-width: 420px;         /* keeps subheading narrow and readable */
+  color: var(--black);
 }
 
-@media (min-width: 1200px){
-  .hero { padding-left: 7%; padding-right: 7%; }
+/* Donate button stays in the same position as before */
+.star-tag {
+  display: inline-block;
+  position: relative;
 }
-
 .star-tag::after {
   content: "★";
   position: absolute;
