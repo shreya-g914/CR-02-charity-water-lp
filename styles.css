@@ -119,18 +119,17 @@ body{
 .brandbar__nav .link-donate:hover{ background: #1f88da; }
 
 /* ---------- Hero ---------- */
-.hero{
-  /* Teal/blue photographic field with a soft overlay for readability */
-  background:
-    url("boydrinkingwater.jpg") center/cover no-repeat;
-    background-size: contain;
+.hero {
+  background: url("boy-drinking-water.jpg") center center no-repeat;
+  background-size: cover;          /* fills the whole width and height */
+  background-attachment: scroll;   /* keeps it responsive */
   color: #fff;
   text-align: left;
-  padding: 80px 20px;
-  min-height: 600px;
-  border-bottom-left-radius: var(--r-md);
-  border-bottom-right-radius: var(--r-md);
-  box-shadow: var(--shadow);
+  padding: 120px 40px;
+  min-height: 600px;               /* gives room for your text */
+  width: 100%;
+  border-radius: 0;                /* removes any rounded edges if present */
+  margin: 0;                       /* ensures no white margin around it */
 }
 
 .hero__grid{
