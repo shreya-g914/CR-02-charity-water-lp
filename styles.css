@@ -45,12 +45,13 @@ html, body {
   gap: 14px;
   padding: 12px 0;
 }
-.logo-sq {
-  width: 28px;
-  height: 28px;
-  background: var(--yellow);
-  border-radius: 6px;
-  box-shadow: inset 0 -3px 0 rgba(0,0,0,0.08);
+.logo-box {
+  width: 35px;
+  height: 35px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/56/Charity_water_logo_can_only.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .brandbar__name {
   font-weight: 800;
