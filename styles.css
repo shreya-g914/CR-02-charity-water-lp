@@ -35,7 +35,7 @@
 html, body { height: 100%; }
 body{
   margin: 0;
-  font-family: Avenir, "Proxima Nova", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: Avenir, "Proxima Nova";
   color: var(--ink);
   background: var(--bg);
   line-height: 1.5;
@@ -124,10 +124,10 @@ body{
   background:
     url("boydrinkingwater.jpg") center/cover no-repeat;
     background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
   color: #fff;
-  padding: 100px 20px;
+  text-align: left;
+  padding: 80px 20px;
+  min-height: 600px;
   border-bottom-left-radius: var(--r-md);
   border-bottom-right-radius: var(--r-md);
   box-shadow: var(--shadow);
