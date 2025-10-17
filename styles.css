@@ -92,6 +92,60 @@ html, body {
   background-color: var(--navy);
   color: var(--cream);
 }
+/* --- Header Layout --- */
+.site-header {
+  display: flex;
+  justify-content: space-between; /* pushes nav to the right */
+  align-items: center;
+  background-color: var(--cream);
+  padding: 10px 40px;
+  height: 55px;
+}
+
+/* Left side (logo + text) */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Right side (navigation) */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 28px; /* spacing between links */
+}
+
+/* Links (“How it works” and “Impact”) */
+.nav-link {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: bold;
+  color: var(--black);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--yellow); /* subtle hover effect */
+}
+
+/* Donate Button */
+.donate-btn {
+  background-color: var(--yellow);
+  color: var(--black);
+  font-family: var(--font-sans);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 6px 18px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.donate-btn:hover {
+  background-color: #e5b800; /* slightly darker yellow */
+  transform: translateY(-2px);
+}
 
 
 .hero {
