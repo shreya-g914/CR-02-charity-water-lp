@@ -80,7 +80,7 @@ html, body {
 
 /* ---------- Hero Section ---------- */
 .hero {
-  background: url("boy-drinking-water.jpg") center 20% no-repeat;
+  background: url("boydrinkingwater.jpg") center 20% no-repeat;
   background-size: cover;
   color: var(--black);
   text-align: left;
