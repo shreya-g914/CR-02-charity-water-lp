@@ -97,9 +97,9 @@ html, body {
   color: var(--yellow);
   font-size: clamp(2rem, 5vw, 3.4rem);
   font-weight: 800;
-  margin: 0 0 10px;         /* tighter spacing like before */
-  line-height: 1.05;        /* slightly more compact lines */
-  max-width: 600px;         /* prevents the text from going too far right */
+  margin: 0 0 10px;
+  line-height: 1.05;
+  white-space: nowrap;   /* forces the whole sentence to stay on one line */
 }
 
 .hero__sub {
