@@ -1,10 +1,10 @@
 /* =========================================================
-   charity: water starter styles (HTML/CSS only)
-   Beginner-friendly: comments, simple layout, no JS.
-   Replace placeholder images when you’re ready.
+   charity: water Landing Page Styles (Updated by Shreya)
+   Brand colors: #FFC907, #003366, #FFF7E1, #1A1A1A, #CBCCD1
+   Fonts: Proxima Nova (sans-serif), Georgia (serif)
    ======================================================= */
 
-/* ---------- Brand tokens (easy to tweak) ---------- */
+/* ---------- Root variables ---------- */
 :root {
   --yellow: #FFC907;
   --navy: #003366;
@@ -12,257 +12,239 @@
   --black: #1A1A1A;
   --gray: #CBCCD1;
 
-  /* Radii + shadow */
-  --r-sm: 8px;
-  --r-md: 14px;
-  --shadow: 0 6px 24px rgba(0,0,0,.08);
+  --font-sans: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
 }
 
-/* ---------- Base ---------- */
+/* ---------- Base setup ---------- */
 * { box-sizing: border-box; }
-html, body { height: 100%; }
-body{
+
+html, body {
   margin: 0;
-  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
-  font-family: Georgia, 'Times New Roman', serif;
-  color: var(--ink);
-  background: var(--bg);
-  line-height: 1.5;
+  padding: 0;
+  background-color: var(--cream);
+  color: var(--black);
+  font-family: var(--font-sans);
+  line-height: 1.6;
 }
 
-/* A centered width wrapper */
-.container{
+/* Container to center content */
+.container {
   width: min(1100px, 92vw);
   margin-inline: auto;
 }
 
-/* Simple button styles (two variants) */
-.btn{
-  display: inline-block;
-  padding: 14px 28px;
-  border-radius: 8px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: transform .15s ease, box-shadow .15s ease, background .2s ease;
-  border: 0;
-  box-shadow: 0 4px 16px rgba(0,0,0,.08);
-  cursor: pointer;
-}
-.btn:focus{ outline: 3px solid rgba(46,157,247,.35); outline-offset: 2px; }
-
-.btn--primary{
-  background: var(--cw-green);
-  color: var(--white);
-}
-.btn--primary:hover{ background: var(--cw-darkgreen); transform: translateY(-2px); }
-
-.btn--ghost{
-  background: var(--white);
-  color: var(--cw-blue);
-  border: 2px solid var(--cw-blue);
-}
-.btn--ghost:hover{ background: rgba(46,157,247,.06); transform: translateY(-2px); }
-
-/* Section headings */
-.section-title{
-  color: var(--cw-blue);
-  margin: 0 0 8px;
-  font-size: clamp(1.35rem, 2.5vw, 1.8rem);
-}
-
 /* ---------- Brand bar ---------- */
-.brandbar{
-  background: var(--cream);
-  border-bottom: 1px solid rgba(0,0,0,.05);
+.brandbar {
+  background-color: var(--cream);
+  border-bottom: 1px solid var(--gray);
 }
-.brandbar__inner{
+.brandbar__inner {
   display: flex;
   align-items: center;
   gap: 14px;
   padding: 12px 0;
 }
-.logo-sq{
-  width: 28px; height: 28px;
-  background: var(--cw-yellow);
+.logo-sq {
+  width: 28px;
+  height: 28px;
+  background: var(--yellow);
   border-radius: 6px;
-  box-shadow: inset 0 -3px 0 rgba(0,0,0,.08);
+  box-shadow: inset 0 -3px 0 rgba(0,0,0,0.08);
 }
-.brandbar__name{
+.brandbar__name {
   font-weight: 800;
-  letter-spacing: .2px;
-  color: #0f172a;
+  letter-spacing: 0.3px;
+  color: var(--navy);
   text-decoration: none;
   margin-right: auto;
 }
-.brandbar__nav a{
-  color: #1f2937;
+.brandbar__nav a {
+  color: var(--black);
   text-decoration: none;
   padding: 8px 10px;
-  border-radius: var(--r-sm);
+  border-radius: 6px;
 }
-.brandbar__nav a:hover{ background: rgba(0,0,0,.06); }
-.brandbar__nav .link-donate{
-  color: var(--white);
-  background: var(--cw-blue);
+.brandbar__nav a:hover {
+  background: rgba(0,0,0,0.06);
 }
-.brandbar__nav .link-donate:hover{ background: #1f88da; }
+.brandbar__nav .link-donate {
+  background-color: var(--yellow);
+  color: var(--black);
+  font-weight: 700;
+}
+.brandbar__nav .link-donate:hover {
+  background-color: var(--navy);
+  color: var(--cream);
+}
 
-/* ---------- Hero ---------- */
+/* ---------- Hero Section ---------- */
 .hero {
-  background: url("boydrinkingwater.jpg") center top 20% no-repeat;
-  background-size: cover;          /* fills the whole width and height */
-  background-attachment: scroll;   /* keeps it responsive */
-  color: #fff;
+  background: url("boy-drinking-water.jpg") center 20% no-repeat;
+  background-size: cover;
+  color: var(--black);
   text-align: left;
   padding: 120px 40px;
-  min-height: 600px;               /* gives room for your text */
+  min-height: 600px;
   width: 100%;
-  border-radius: 0;                /* removes any rounded edges if present */
-  margin: 0;                       /* ensures no white margin around it */
+  border-radius: 0;
+  margin: 0;
 }
 
-.hero__grid{
-  display: grid;
-  grid-template-columns: 1.2fr .9fr;
-  gap: clamp(16px, 4vw, 36px);
-  align-items: center;
+/* Hero text */
+.hero__title {
+  font-family: var(--font-sans);
+  color: var(--yellow);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  margin: 0 0 16px;
 }
-@media (max-width: 880px){
-  .hero__grid{ grid-template-columns: 1fr; }
-}
-
-.hero__title{
-  /* Yellow headline like your mock */
-  color: var(--cw-yellow);
-  font-size: clamp(1.9rem, 5.5vw, 3.2rem);
-  line-height: 1.08;
-  margin: 0 0 10px;
-  letter-spacing: .2px;
-  text-wrap: balance;
-}
-.nowrap{ white-space: nowrap; }
-
-.hero__sub{
-  font-size: clamp(1rem, 2.2vw, 1.125rem);
+.hero__sub {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
   max-width: 42ch;
-  margin: 0 0 18px;
-  text-shadow: 0 2px 6px rgba(0,0,0,.25);
+  margin: 0 0 20px;
+  color: var(--black);
 }
-
-.hero__image-wrap{
-  position: relative;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-}
-.hero__image{
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  aspect-ratio: 4/3;
-  /* If you use an image with a person on right, it feels like the mock */
-}
-
-/* Little star-burst sticker on the Donate button (pure CSS) */
-.star-tag{
-  position: relative;
-}
-.star-tag::after{
+.star-tag::after {
   content: "★";
   position: absolute;
   left: -14px;
   top: -14px;
   font-size: 20px;
   transform: rotate(-12deg);
-  color: var(--cw-yellow);
-  text-shadow: 0 2px 0 rgba(0,0,0,.08);
+  color: var(--yellow);
+  text-shadow: 0 2px 0 rgba(0,0,0,0.08);
 }
 
-/* ---------- How it works ---------- */
-.how{
-  padding: 44px 0;
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease;
 }
-.how__grid{
+.btn:focus {
+  outline: 3px solid rgba(0,51,102,0.35);
+  outline-offset: 2px;
+}
+
+.btn--primary {
+  background-color: var(--yellow);
+  color: var(--black);
+}
+.btn--primary:hover {
+  background-color: var(--navy);
+  color: var(--cream);
+  transform: translateY(-2px);
+}
+
+.btn--ghost {
+  background: var(--cream);
+  color: var(--navy);
+  border: 2px solid var(--navy);
+}
+.btn--ghost:hover {
+  background: rgba(0,51,102,0.08);
+  transform: translateY(-2px);
+}
+
+/* ---------- Sections ---------- */
+section {
+  background-color: var(--cream);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin: 24px 10px;
+  padding: 32px 24px;
+}
+.section-title {
+  font-family: var(--font-sans);
+  color: var(--navy);
+  font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+  margin-top: 0;
+}
+
+/* ---------- How it Works ---------- */
+.how__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   margin-top: 16px;
 }
-@media (max-width: 860px){
-  .how__grid{ grid-template-columns: 1fr; }
-}
-
-.card{
-  background: var(--white);
-  border-radius: var(--r-md);
-  box-shadow: var(--shadow);
+.card {
+  background: var(--gray);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   padding: 18px;
   text-align: left;
 }
-.card__img{
+.card__img {
   width: 100%;
-  height: 140px;
-  object-fit: cover;
-  border-radius: var(--r-sm);
+  border-radius: 8px;
   margin-bottom: 12px;
 }
-.card__title{
-  margin: 6px 0 2px;
-  color: var(--cw-blue);
-  font-size: 1.05rem;
+.card__title {
+  color: var(--navy);
+  font-family: var(--font-sans);
+  margin: 4px 0;
 }
-.card__text{ margin: 0; }
+.card__text {
+  font-family: var(--font-serif);
+  color: var(--black);
+  margin: 0;
+}
 
-/* ---------- Impact story ---------- */
-.impact{
-  padding: 10px 0 52px;
+/* ---------- Impact Story ---------- */
+.impact {
+  background-color: var(--gray);
 }
-.impact__inner{
+.impact__inner {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 22px;
   align-items: center;
-  background: var(--white);
-  border-radius: var(--r-md);
-  box-shadow: var(--shadow);
-  padding: clamp(16px, 4vw, 28px);
 }
-@media (max-width: 900px){
-  .impact__inner{ grid-template-columns: 1fr; }
+@media (max-width: 900px) {
+  .impact__inner { grid-template-columns: 1fr; }
 }
-.impact__img{
+.impact__img {
   width: 100%;
-  border-radius: var(--r-sm);
+  border-radius: 10px;
   object-fit: cover;
   aspect-ratio: 4/3;
 }
-.impact__copy p{ margin: 6px 0 14px; }
+.impact__copy p {
+  font-family: var(--font-serif);
+  color: var(--black);
+}
 
 /* ---------- Footer ---------- */
-.site-footer{
-  background: var(--cream);
-  border-top: 1px solid rgba(0,0,0,.06);
+.site-footer {
+  background-color: var(--navy);
+  color: var(--cream);
+  padding: 20px 0;
+  text-align: center;
 }
-.footer__inner{
+.footer__inner {
   display: flex;
-  gap: 16px;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 16px 0;
+  gap: 12px;
 }
-.footer__line{
+.footer__line {
+  font-family: var(--font-serif);
   margin: 0;
-  font-weight: 600;
-  color: #374151;
+  color: var(--cream);
 }
-
-/* Optional: sticky donate bar on very small screens */
-@media (max-width: 540px){
-  .site-footer{
-    position: sticky;
-    bottom: 0;
-    z-index: 10;
-    box-shadow: 0 -8px 20px rgba(0,0,0,.06);
-  }
+.footer__inner .btn--primary {
+  background-color: var(--yellow);
+  color: var(--black);
+}
+.footer__inner .btn--primary:hover {
+  background-color: var(--cream);
+  color: var(--navy);
 }
