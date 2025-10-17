@@ -5,24 +5,12 @@
    ======================================================= */
 
 /* ---------- Brand tokens (easy to tweak) ---------- */
-:root{
-  /* Primary palette (from your sample) */
-  --cw-yellow: #FFC907;
-  --cw-blue:   #2E9DF7;
-
-  /* Secondary/support */
-  --cw-lightblue: #8BD1CB;
-  --cw-green:     #4FCB53;
-  --cw-orange:    #FF902A;
-  --cw-red:       #F5402C;
-  --cw-darkgreen: #159A48;
-  --cw-pink:      #F16061;
-
-  /* Neutrals */
-  --cream: #FFF4DB;       /* brand bar background to match your mock */
-  --ink:   #222;
-  --bg:    #f4f8fb;
-  --white: #fff;
+:root {
+  --yellow: #FFC907;
+  --navy: #003366;
+  --cream: #FFF7E1;
+  --black: #1A1A1A;
+  --gray: #CBCCD1;
 
   /* Radii + shadow */
   --r-sm: 8px;
@@ -35,7 +23,8 @@
 html, body { height: 100%; }
 body{
   margin: 0;
-  font-family: Avenir, "Proxima Nova", Georgia;
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+  font-family: Georgia, 'Times New Roman', serif;
   color: var(--ink);
   background: var(--bg);
   line-height: 1.5;
