@@ -124,8 +124,8 @@ body{
   background:
     linear-gradient( to right, rgba(46,157,247,0.55), rgba(46,157,247,0.15) ),
     url("boydrinkingwater.jpg") center/cover no-repeat;
-  color: var(--white);
-  padding: clamp(28px, 6vw, 64px) 0;
+  color: #fff;
+  padding: 100px 20px;
   border-bottom-left-radius: var(--r-md);
   border-bottom-right-radius: var(--r-md);
   box-shadow: var(--shadow);
