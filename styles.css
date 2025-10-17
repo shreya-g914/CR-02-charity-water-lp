@@ -62,6 +62,13 @@ html, body {
   letter-spacing: 0.5px;
   text-decoration: none; /* removes underline if it somehow stays linked */
 }
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--cream);
+  padding: 20px 40px;
+}
 
 .brandbar__nav a {
   color: var(--black);
