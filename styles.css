@@ -127,7 +127,12 @@ html, body {
   color: var(--yellow);
   text-shadow: 0 2px 0 rgba(0,0,0,0.08);
 }
-
+.hero__title,
+.hero__sub,
+.star-tag {
+  position: relative;
+  left: -60px; /* move text left - increase this number to move further */
+}
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-block;
