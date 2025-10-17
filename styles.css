@@ -78,19 +78,17 @@ html, body {
   color: var(--cream);
 }
 
-/* ---------- Hero Section ---------- */
+/* ---------- Hero Section (Restored Layout) ---------- */
 .hero {
-  background: url("boydrinkingwater.jpg") center 20% no-repeat;
+  background: url("boy-drinking-water.jpg") center 20% no-repeat;
   background-size: cover;
   color: var(--black);
   text-align: left;
-  padding: 100px 10%;   /* reduces side padding for better text placement */
+  padding: 120px 40px;     /* restores the original spacing */
   min-height: 600px;
   width: 100%;
   border-radius: 0;
   margin: 0;
-  display: flex;        /* aligns content neatly */
-  align-items: center;  /* vertically centers the text */
 }
 
 /* Hero text */
