@@ -282,6 +282,12 @@ section {
   color: var(--black);
   margin: 0;
 }
+.card img {
+  width: 100%;
+  height: 280px; /* you can adjust this to fit your design */
+  object-fit: cover; /* keeps proportions while cropping */
+  border-radius: 8px; /* keeps rounded corners consistent */
+}
 
 /* ---------- Impact Story ---------- */
 .impact {
