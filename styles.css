@@ -237,6 +237,9 @@ html, body {
   background: rgba(0,51,102,0.08);
   transform: translateY(-2px);
 }
+.btn {
+  font-size: 20px;
+}
 
 /* ---------- Sections ---------- */
 section {
